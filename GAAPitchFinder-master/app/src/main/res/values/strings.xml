@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GAA Pitch Finder</string>
+    <string name="club">Enter a Club: </string>
+    <string name="recv_task">Task: </string>
+    <string name="press">Press</string>
+
+    <string name="searchclub_button">Search Clubs</string>
+    <string name="getclub_button">View Clubs</string>
+    <string name="addclub_button">Add a Club</string>
+    <string name="button_county">View Counties</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_add_club">AddClub</string>
+    <string name="title_activity_all_club_display">AllClubDisplay</string>
+    <string name="title_activity_club_info">ClubInfo</string>
+    <string name="title_activity_county_display">CountyDisplay</string>
+    <string name="title_activity_search">SearchActivity</string>
+</resources>

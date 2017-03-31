@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                 android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+                 android:paddingRight="@dimen/activity_horizontal_margin"
+                 android:paddingTop="@dimen/activity_vertical_margin"
+                 android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".GaaActivity">
+    <!--<Button-->
+     <!--android:id="@+id/addclub_button"-->
+     <!--android:layout_width="fill_parent"-->
+     <!--android:layout_height="wrap_content"-->
+     <!--android:text="@string/addclub_button"-->
+     <!--android:layout_above="@+id/button_county"-->
+     <!--android:layout_alignLeft="@+id/getclub_button"-->
+     <!--android:layout_alignStart="@+id/getclub_button"-->
+     <!--android:layout_alignRight="@+id/getclub_button"-->
+     <!--android:layout_alignEnd="@+id/getclub_button"/>-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView"
+        android:src="@mipmap/pitch_logo"
+        android:layout_above="@+id/searchclub_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:background="@color/light_green"
+        android:id="@+id/button_county"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_county"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:background="@color/light_green"
+        android:id="@+id/getclub_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/getclub_button"
+        android:layout_above="@+id/button_county"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:background="@color/light_green"
+        android:id="@+id/searchclub_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/searchclub_button"
+        android:layout_above="@+id/getclub_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp" />
+</RelativeLayout>

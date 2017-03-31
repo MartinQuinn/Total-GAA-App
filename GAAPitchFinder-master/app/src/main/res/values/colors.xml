@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_green">#99CC99</color>
+    <color name="green_pitch">#7ABA7A</color>
+    <color name="dark_red">#CC44</color>
+    <color name="red">#D34328</color>
+    <color name="red2">#987654</color>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="martin.quinn.gaapitchfinder" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/pitch_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".GaaActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddClub"
+            android:label="@string/title_activity_add_club" >
+        </activity>
+        <activity
+            android:name=".AllClubDisplay"
+            android:label="@string/title_activity_all_club_display" >
+        </activity>
+        <activity
+            android:name=".ClubInfo"
+            android:label="@string/title_activity_club_info" >
+        </activity>
+        <activity
+            android:name=".CountyDisplay"
+            android:label="@string/title_activity_county_display" >
+        </activity>
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/title_activity_search">
+            <intent-filter>
+                <action android:name="ANDROID.INTENT.ACTION.SEARCH"></action>
+            </intent-filter>
+            <meta-data android:name=".app.deafult_searchable"
+                       android:resource="@xml/searchable"/>
+        </activity>
+    </application>
+
+</manifest>

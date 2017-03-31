@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context=".GaaActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_club"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/club"/>
+
+        <EditText
+            android:id="@+id/editText_clubName"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_club"
+            android:hint="Name"/>
+
+        <EditText
+            android:id="@+id/editText_countyName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_clubName"
+            android:hint="County"/>
+
+        <EditText
+            android:id="@+id/editText_colours"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_countyName"
+            android:hint="Colours"/>
+
+        <EditText
+            android:id="@+id/editText_clubDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:layout_below="@+id/editText_colours"
+            android:hint="Description"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/editText_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_clubDesc"
+            android:hint="Location(long,lat)"/>
+
+        <EditText
+            android:id="@+id/editText_webSite"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_location"
+            android:hint="WebSite Link"/>
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_webSite"
+            android:text="@string/addclub_button"/>
+
+        <Button
+            android:id="@+id/button_retrieve"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_submit"
+            android:text="@string/getclub_button"/>
+
+    </LinearLayout>
+</ScrollView>
+
