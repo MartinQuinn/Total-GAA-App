@@ -4,17 +4,17 @@
     <string name="recv_task">Task: </string>
     <string name="press">Press</string>
 
-    <string name="searchclub_button">Search Clubs</string>
-    <string name="getclub_button">View Clubs</string>
+    <string name="searchclub_button">Search</string>
+    <string name="getclub_button">ALl Clubs</string>
     <string name="addclub_button">Add a Club</string>
-    <string name="button_county">View Counties</string>
+    <string name="button_county">All Counties</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
     <string name="title_activity_add_club">AddClub</string>
-    <string name="title_activity_all_club_display">AllClubDisplay</string>
-    <string name="title_activity_club_info">ClubInfo</string>
-    <string name="title_activity_county_display">CountyDisplay</string>
-    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_all_club_display">Clubs</string>
+    <string name="title_activity_club_info">Tap a Club to Locate</string>
+    <string name="title_activity_county_display">All Counties</string>
+    <string name="title_activity_search">Search for a Club</string>
 </resources>

@@ -39,18 +39,6 @@ public class GaaActivity extends AddClub {
 
             }
         });
-//        // Add Club Button to start the add club activity
-//        addClubButton = (Button)findViewById(R.id.addclub_button);
-//        addClubButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // Start AddClubActivity
-//
-//                Intent addClubActivity = new Intent(GaaActivity.this, AddClub.class);
-//                startActivity(addClubActivity);
-//
-//            }
-//        });
 
         // Get Club Button to start the Display club activity
         getClubButton = (Button)findViewById(R.id.getclub_button);

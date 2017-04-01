@@ -33,104 +33,17 @@ public class ClubInfo extends AddClub {
         // when clicked will send you straight to the location of the Club through google maps.
 
         listInfo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                                            @Override
-                                            public void onItemClick(AdapterView<?> av, View view, int position, long id) {
-
-                                                //This Searches The Website of a certain club.
-                                                Cursor cursor = (Cursor) cursorAdapter.getItem(position);
-                                                final String website = cursor.getString(cursor.getColumnIndex("location"));
-                                                String webURL = "";
-
-                                                webURL += website;
-                                                Log.d("location", webURL);
-                                                Uri gmmIntentUri = Uri.parse(webURL);
-                                                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                                                startActivity(mapIntent);
-                                            }
-                                        });
-
-        // This is the Long Click which makes the the Dialog pop up.
-        listInfo.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                final ClubOptionDialog clubOptionDialog = new ClubOptionDialog(ClubInfo.this);
-                clubOptionDialog.show();
-
-
-                clubOptionDialog.editButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Cursor cursor = (Cursor) cursorAdapter.getItem(position);
-                        int clubID = cursor.getInt(0);
-                        Intent clubIntent = new Intent(ClubInfo.this, AddClub.class);
-                        clubIntent.putExtra("clubID",clubID);
-                        startActivity(clubIntent);
-
-                        clubOptionDialog.cancel();
-                    }
-                });
-                // This is the dialog delete button that finds the ID of a club and
-                // Deletes it from the Database
-                clubOptionDialog.deleteButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Cursor cursor = (Cursor) cursorAdapter.getItem(position);
-                        int clubID = cursor.getInt(0);
-                        try {
-                            db.open();
-                            db.delete(clubID);
-                            db.close();
-                            Intent intent = new Intent();
-                            setResult(RESULT_OK, intent);
-                            finish();
-                        } catch (SQLException e) {
-                            e.printStackTrace();
-                        } finally {
-                            clubOptionDialog.cancel();
-                            Toast.makeText(ClubInfo.this, "Deleted", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                });
-
-                //This is the location button that grabs the location of the Club
-                clubOptionDialog.locButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        //This Searches The Website of a certain club.
-                        Cursor cursor = (Cursor) cursorAdapter.getItem(position);
-                        final String website = cursor.getString(cursor.getColumnIndex("location"));
-                        String webURL = "";
-
-                        webURL += website;
-                        Log.d("location", webURL);
-                        Uri gmmIntentUri = Uri.parse(webURL);
-                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                        startActivity(mapIntent);
-                        clubOptionDialog.cancel();
-                    }
-                });
-
-                clubOptionDialog.webButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        //This Searches The Website of a certain club.
-                        Cursor cursor = (Cursor) cursorAdapter.getItem(position);
-                        final String website = cursor.getString(cursor.getColumnIndex("website"));
-                        String webURL = "https://";
-                        webURL += website;
-
-                        Uri gmmIntentUri = Uri.parse(webURL);
-                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                        startActivity(mapIntent);
-                        clubOptionDialog.cancel();
-                    }
-                });
-
-
-                return true;
+            public void onItemClick(AdapterView<?> av, View view, int position, long id) {
+                //This Searches The Website of a certain club.
+                Cursor cursor = (Cursor) cursorAdapter.getItem(position);
+                final String website = cursor.getString(cursor.getColumnIndex("location"));
+                String webURL = "";
+                webURL += website;
+                Log.d("location", webURL);
+                Uri gmmIntentUri = Uri.parse(webURL);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                startActivity(mapIntent);
             }
         });
 

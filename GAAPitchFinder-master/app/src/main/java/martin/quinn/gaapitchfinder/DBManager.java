@@ -2232,6 +2232,7 @@ public class DBManager {
         return db.insert(TABLE_CLUBS, null, initialValues);
     }
 
+    //for development use
     public long updateClub(int id,int county_id,String club_name, String colours, String club_description, String location, String website) {
         ContentValues initialValues = new ContentValues();
 
